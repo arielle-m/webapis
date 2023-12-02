@@ -1,28 +1,55 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic (CALLED IN ANOTHER FILE)
-	- Normalize
-	- Box sizing
-	- Media width
-# Base
-	- Typography
-	- Elements
-	- Links
-# Layouts
-# Components
-	- Header
-	- Main
-	- Footer
---------------------------------------------------------------*/
+@charset "utf-8";
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
+/*
+==========
+TABLE OF CONTENTS
+==========
 
-/* Typography
---------------------------------------------- */
+|| VARIABLES
+|| BASE
+    -- Typography
+    -- Elements
+    -- Links
+|| COMPONENTS
+    -- Header
+    -- Main
+    -- Footer
+*/
+
+
+/* || VARIABLES ===================================*/
+:root{ 
+    /* colors */
+    --pri1: #ff8c1b;
+    --pri2: #ffa64f;
+    --pri3: #ffbe6e;
+
+    --sec1: #004e75;
+    --sec2: #29a7d1;
+    --sec3: #4ecdde;
+
+    --light1: #f8f0e7;
+    --light2: #d5c9bc;
+
+
+    --dark1: #080a1c;
+    --dark2: #20254a;
+}
+
+/* || BASE ======================================= */
+/* -- Typography --------------------------------- */
 body {
+    background-color: var(--dark1);
+    color: var(--light1);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+p {
+    margin: 0.75rem 0;
 }
 
 h1,
@@ -31,58 +58,209 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: var(--pri1);
+    font-weight: 800;
 }
 
-p {
+h1 {
+    font-size: 2.75rem;
+}
+h2 {
+    font-size: 1.825rem;
+    margin: 0.5rem 0;
+}
+h3 {
+    font-size: 1.5rem;
 }
 
-/* Elements
---------------------------------------------- */
-ul {
+figcaption {
+    font-size: 1rem;
 }
 
-ol {
+/* -- Elements ----------------------------------- */
+html {
+    scroll-behavior: smooth;
 }
 
-dl {
+:target:before {
+    content: "";
+    display: block;
+    height: 2rem;
+    margin: -2rem 0 0;
 }
 
-figure {
+
+button {
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--dark1);
+    background-color: var(--sec3);
+    border: none;
+    display: inline-block;
+    padding: 0.75rem 1rem;
 }
 
-table {
+section{
+    background-color: var(--dark1);
+    padding: 2.5rem 1rem;
+}
+section:nth-of-type(even) {
+    background-color: var(--dark2);
 }
 
-/* Links
---------------------------------------------- */
-a {
-}
-
+/* -- Links -------------------------------------- */
+a,
 a:visited {
+    color: var(--pri3);
 }
 
-a:hover {
+a:hover,
+a:focus {
+    color: var(--sec2);
 }
 
 a:focus {
+    border: 2px solid var(--sec1);
 }
 
 a:active {
+    color: var(--sec3);
+    background-color: var(--sec1);
 }
 
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
 
-/* Header
---------------------------------------------- */
 
-/* Main
---------------------------------------------- */
+/* || COMPONENTS ================================= */
+body{
+    background-color: var(--dark2);
+}
 
-/* Footer
---------------------------------------------- */
+.site-wrapper {
+    display: grid;
+    grid-template-columns: minmax(auto, 60rem);
+    justify-content: center;
+}
+
+@media (min-width: 60em) {
+	.site-wrapper{
+		grid-template-columns: minmax(auto, 20rem) minmax(auto, 64rem);
+	}
+}
+
+/* -- Header ------------------------------------- */
+.site-header {
+    background-color: var(--pri1);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-logo img {
+    width: 4rem;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 20%;
+}
+
+a.site-logo{
+    line-height: 0;
+}
+
+/* menu button */
+.menu-toggle {
+	display: inline-block;
+	background-color: transparent;
+	border: 0;
+}
+
+.menu-toggle svg path {
+	fill: var(--light1);
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+} 
+
+
+
+
+.site-navigation ul {
+    display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	position: absolute;
+    width: 100%;
+	z-index: 70;
+    right:0;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+    color: var(--light1);
+    font-weight: 600;
+}
+
+
+/* Navigation Bar */
+nav a:hover,
+nav a:focus {
+    background-color: var(--pri3);
+    color: var(--light1);
+}
+
+nav a:focus {
+    border: 2px solid var(--dark1);
+}
+
+nav a:active {
+    background-color: var(--sec3);
+    color: var(--pri1);
+}
+
+@media (min-width: 60em) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-navigation ul {
+        display: flex;
+		flex-direction: column;
+        position: static;
+
+    }
+
+	header {
+		display: block;
+	}
+}
+
+/* -- Main --------------------------------------- */
+
+
+
+
+
+
+/* Footer -----------------------------------------*/
+
+footer {
+    background-color: var(--sec3);
+    padding: 1rem 0;
+    text-align: center; 
+}

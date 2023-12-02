@@ -1,112 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web API</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web APIs</title>
+  <meta name="description" content="Web APIs are software interfaces that allow different applications to communicate and exchange data over the internet. They make websites and apps work together seamlessly by following some rules or protocols.">
 
-    <link rel="stylesheet" href="styles/normalize-fwd.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script defer src="scripts/script.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Web API</h1>
-    </header>
-    <main>
-      <section class="sidebar">
-        <h2>Menu</h2>
-        <a href="#">What is Web API?</a><br/>
-        <a href="#">What is Web API?</a><br/>
-        <a href="#">What is Web API?</a><br/>
-        <a href="#">What is Web API?</a><br/>
-      </section>
-      <section class="main">
-      <div class="paragraphs">
-      <h2>What is Web API ?</h2>
+  <!-- favicon -->
+  <!-- <link rel="icon" href="favicon/favicon.ico" sizes="any"> 
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest"> -->
 
-      <h2>What is Geolocation API ?</h2>
-      <p>
-        Geolocation APIs enable developers to access a device's geolocation, it
-        utilizes various methods like WIFI, GPS, and IP to determine a user's
-        location, and returns latitude/longitude coordinates and a radius
-        indicating result accuracy. Geolocation APIs are pivotal elements for
-        creating features such as location-based services, maps, navigation, and
-        local search, which leads to personalized content and directions. This
-        functionality is also essential in areas like emergency services, asset
-        tracking, and IoT devices.
-      </p>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-      <h2>What does it do ?</h2>
+  <!-- external -->
+  <link rel="stylesheet" href="styles/normalize-fwd.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body id="#top">
+  <a href="#site-main" class="screen-reader-text">Skip to content</a>
+<div class="site-wrapper">
+  <header>
+    <h1>Web APIs</h1>
+    <nav class="site-navigation" id="site-navigation">
+      <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+            <title>Menu icon</title>
+            <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path>
+        </svg>
+      </button>
 
-      <h2>Why would you use it ?</h2>
-
-      <h2>Where would you use it ?</h2>
-
-      <h2>Pros and cons of Geolocation API</h2>
-      <h3>Pros</h3>
       <ul>
-        <li>
-          <p><strong>Weather Reports:</strong> With advanced technology like
-          satellites, weather forecasts have become more accurate, aiding in
-          better preparation for changing weather conditions. Geolocation APIs
-          allows users to access live local weather information just a click
-          away.</p>
-        </li>
-        <li>
-          <p><strong>Content Personalization for Social Media:</strong> Geolocation
-          APIs empower businesses to deliver tailor-made marketing offers. Based
-          on users’ different background, interests, motivations, and goals, it
-          allows businesses to deliver the right message to the right person at
-          the right time in the right form, which enhances the user experience
-          through personalized content on social media platforms.</p>
-        </li>
-        <li>
-          <p><strong>Marketing and Customer Engagement:</strong> Geolocation
-          provides businesses with valuable data to help them better analyze
-          customer behaviours, solve problems, discover new opportunities, and
-          optimize their business processes.</p>
-        </li>
-        <li>
-          <p><strong>Employment and Business Networking:</strong> Job listing
-          websites utilize geolocation to connect job seekers with opportunities
-          in their vicinity, facilitating localized job searches.</p>
-        </li>
+        <li>Web APIs</li>
+        <ul>
+          <li><a href="#api-what">What is a Web API?</a></li>
+          <li><a href="#api-how">How does a Web API work?</a></li>
+          <li><a href="#api-examples">Web API examples</a></li>
+        </ul>
+        <li>Geolocation</li>
+        <ul>
+          <li><a href="#geo-what">What is Geolocation?</a></li>
+          <li><a href="#geo-do">What does it do?</a></li>
+          <li><a href="#geo-why">Why would you use it?</a></li>
+          <li><a href="#geo-where">Where would you use it?</a></li>
+          <li><a href="#geo-pros-cons">Pros &amp; Cons</a></li>
+          <li><a href="#geo-demo">Code demo</a></li>
+        </ul>
+        <li><a href="#references">References</a></li>
       </ul>
-      <h3>Cons</h3>
+    </nav>
+  </header>
+  <main>
+    
+    <section>
+      <h2>Introduction to Web APIs</h2>
+      <article id="api-what">
+        <h3>What is a Web API?</h3>
+      </article>
+      <article id="api-how">
+        <h3>How does a Web API work?</h3>
+      </article>
+      <article id="api-examples">
+        <h3>Web API examples</h3>
+      </article>
+    </section>
+    <section>
+      <h2>Geolocation</h2>
+      <article id="geo-what">
+        <h3>What is Geolocation API ?</h3>
+        <p>
+          Geolocation APIs enable developers to access a device's geolocation, it
+          utilizes various methods like WIFI, GPS, and IP to determine a user's
+          location, and returns latitude/longitude coordinates and a radius
+          indicating result accuracy. Geolocation APIs are pivotal elements for
+          creating features such as location-based services, maps, navigation, and
+          local search, which leads to personalized content and directions. This
+          functionality is also essential in areas like emergency services, asset
+          tracking, and IoT devices.
+        </p>
+      </article>
+      <article id="geo-what">
+        <h3>What does it do?</h3>
+      </article>
+      <article id="geo-why">
+        <h3>Why would you use it?</h3>
+      </article>
+      <article id="geo-where">
+        <h3>Where would you use it?</h3>
+      </article>
+      <article id="geo-pros-cons">
+        <h3>Pros &amp; cons</h3>
+        <h4>Pros</h4>
+        <ul>
+          <li>
+            <p><strong>Weather Reports:</strong> With advanced technology like
+            satellites, weather forecasts have become more accurate, aiding in
+            better preparation for changing weather conditions. Geolocation APIs
+            allows users to access live local weather information just a click
+            away.</p>
+          </li>
+          <li>
+            <p><strong>Content Personalization for Social Media:</strong> Geolocation
+            APIs empower businesses to deliver tailor-made marketing offers. Based
+            on users' different background, interests, motivations, and goals, it
+            allows businesses to deliver the right message to the right person at
+            the right time in the right form, which enhances the user experience
+            through personalized content on social media platforms.</p>
+          </li>
+          <li>
+            <p><strong>Marketing and Customer Engagement:</strong> Geolocation
+            provides businesses with valuable data to help them better analyze
+            customer behaviours, solve problems, discover new opportunities, and
+            optimize their business processes.</p>
+          </li>
+          <li>
+            <p><strong>Employment and Business Networking:</strong> Job listing
+            websites utilize geolocation to connect job seekers with opportunities
+            in their vicinity, facilitating localized job searches.</p>
+          </li>
+        </ul>
+        <h4>Cons</h4>
+        <ul>
+          <li>
+            <p><strong>Stalking:</strong> A significant drawback of geolocation APIs
+            involves the potential for inadvertent disclosure of one's location on
+            social media, making individuals vulnerable to stalking and real-life
+            attacks by those with malicious intent.</p>
+          </li>
+          <li><strong>Concerns and Data Rights:</strong> With the growth of privacy
+            awareness, according to Matthew Crozier (n.d.)
+            <blockquote cite="https://granicus.com/blog/pros-cons-using-geolocation-online-community-engagement/">“Jurisdictions leading
+            the way on data privacy like Europe and Canada, along with some US
+            Federal Statutes such as COPPA (Children's Online Privacy Protection
+            Act) are starting to form an opinion that IP addresses are PII, or
+            "personal data" <cite>(Matthew Crozier, n.d.)</cite>.</blockquote> 
+            Gathering such information without explicit consent may pose legal and ethical challenges,emphasizing the need for caution in data collection.</p>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>References</h2>
       <ul>
-        <li>
-          <p><strong>Stalking:</strong> A significant drawback of geolocation APIs
-          involves the potential for inadvertent disclosure of one's location on
-          social media, making individuals vulnerable to stalking and real-life
-          attacks by those with malicious intent.</p>
-        </li>
-        <li><strong>Concerns and Data Rights:</strong> With the growth of privacy
-          awareness, according to Matthew Crozier (n.d.)<br/>
-          <blockquote cite="https://granicus.com/blog/pros-cons-using-geolocation-online-community-engagement/">“Jurisdictions leading
-          the way on data privacy like Europe and Canada, along with some US
-          Federal Statutes such as COPPA (Children’s Online Privacy Protection
-          Act) are starting to form an opinion that IP addresses are PII, or
-          “personal data”” <cite>(Matthew Crozier, n.d.)</cite>.</blockquote><br/> 
-          Gathering such information without explicit consent may pose legal and ethical challenges,emphasizing the need for caution in data collection.</p>
-        </li>
+        <li><a href="https://developers.google.com/maps/documentation/geolocation/overview">Geolocation API overview</a></li>
+        <li><a href="https://granicus.com/blog/pros-cons-using-geolocation-online-community-engagement/">The Pros and Cons of Using Geolocation in Online Community Engagement</a></li>
+        <li><a href="https://medium.com/@aleb/pros-and-cons-of-using-ip-geolocation-apis-bae871237a1b">Pros And Cons Of Using IP Geolocation APIs</a></li>
+        <li><a href="https://blog.apilayer.com/10-compelling-reasons-why-you-need-an-ip-address-geolocation-api/">10 Compelling Reasons Why You Need An IP Address Geolocation API</a></li>
       </ul>
-        </div>
-
-        <div class="reference">
-        <h2>References</h2>
-        <a href="https://developers.google.com/maps/documentation/geolocation/overview">Geolocation API overview</a><br/>
-        <a href="https://granicus.com/blog/pros-cons-using-geolocation-online-community-engagement/">The Pros and Cons of Using Geolocation in Online Community Engagement</a><br/>
-        <a href="https://medium.com/@aleb/pros-and-cons-of-using-ip-geolocation-apis-bae871237a1b">Pros And Cons Of Using IP Geolocation APIs</a><br/>
-        <a href="https://blog.apilayer.com/10-compelling-reasons-why-you-need-an-ip-address-geolocation-api/">10 Compelling Reasons Why You Need An IP Address Geolocation API</a><br/>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>&copy; 2023 Arielle Marin, Ali Abbasi, Nathalie Chang, Uellem Espinueva</p>
-      <p>For educational purpose only.</p>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Arielle Marin, Ali Abbasi, Nathalie Chang, Uellem Espinueva</p>
+    <p>For educational purpose only.</p>
+  </footer>
+</div>
+</body>
 </html>
