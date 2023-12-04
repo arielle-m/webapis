@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'SF Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+    src: url('../fonts/SFPRODISPLAYREGULAR.OTF');
+}
+
+@font-face {
+    font-family: 'SF Pro';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+    src: url('../fonts/SFPRODISPLAYBOLD.OTF');
+}
+
+body {
+	font-family: 'SF Pro', Arial, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 2.2rem;
+	color: black;
+  	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    margin: 2rem;
+	border-bottom: 1.5px solid black;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+
+#map {
+	height: 380px; 
+}
+
+section {
+	padding: 0 2rem;
+}
+
+footer {
+	text-align: center;
+	color: #fff;
+	background-color: black;
+	padding: .5rem 0;
+	margin: 0;
+}
