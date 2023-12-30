@@ -15,7 +15,7 @@
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- external -->
   <link rel="stylesheet" href="styles/normalize-fwd.css">
@@ -26,7 +26,7 @@
   <a href="#site-main" class="screen-reader-text">Skip to content</a>
 <div class="site-wrapper">
   <header class="site-header">
-    <h1>Web APIs</h1>
+    <h1>Web API</h1>
     <nav class="site-navigation" id="site-navigation">
       <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@
         <li>Web APIs</li>
         <ul>
           <li><a href="#api-what">What is a Web API?</a></li>
-          <li><a href="#api-how">How does a Web API work?</a></li>
+          <li><a href="#api-how">How does it work?</a></li>
           <li><a href="#api-examples">Web API examples</a></li>
         </ul>
         <li>Geolocation</li>
@@ -61,18 +61,55 @@
       <h2>Introduction to Web APIs</h2>
       <article id="api-what">
         <h3>What is a Web API?</h3>
+        <p>Web APIs, or <strong>web application programming interfaces</strong>, are incredibly important in the world of software development. They are what allows a website:</p>
+          <ul>
+            <li>to find the closest Tim Hortons to you,</li>
+            <li>to remember what you added to your shopping cart, and</li>
+            <li>to save your login information.</li>
+          </ul>
+        <p>Web APIs essentially act as bridges that allow different software applications or websites to communicate and work together seamlessly by sharing information over the internet.</p>
       </article>
       <article id="api-how">
-        <h3>How does a Web API work?</h3>
+        <h3>How does it work?</h3>
+        <h4>Restaurant Analogy</h4>
+        <p>To help make APIs and the information sharing process easier to understand, imagine that you're a customer at a restaurant.</p>
+          <ul>
+            <li>When ordering, you need to place an order by communicating with the waiter/waitress.</li>
+            <li>When the waiter/waitress takes the order, they need to write it down on their notepad, often using a shorthand form of the menu items, which the chef will still be able to understand.</li>
+            <li>They will then give that order to the chef to tell them what you want to eat.</li>
+            <li>Then the chef will create your order, and the waiter/waitress will take your food to you. </li>
+          </ul>
+        <p>In this scenario, you &#8212; the customer &#8212; are the client.</p>
+          <ul>
+            <li>The chef would be the server,</li>
+            <li>the waiter/waitress would be the API,</li>
+            <li>the order would be the request, and</li>
+            <li>the food would be the response.</li>
+          </ul>
+        <p>Notice how the API &#8212; or the waiter/waitress in this analogy &#8212; is the intermediary &#40;also known as the middleman&#41;, between the user and the server.</p>
+        <p>The API is responsible for delivering the request &#8212; or the customer's order &#8212; from the user to the server, and for delivering the response &#8212; or the customer's food &#8212; from the server to the user.</p>
+        <h4>Actual API Process</h4>
+        <p>APIs work by following a set of rules — or protocols — that define how the communication between applications should happen. One of the most common protocols for web APIs is HTTP, which stands for HyperText Transfer Protocol.</p>
+        <p><strong>HTTP</strong> defines how a client &#40;the application that makes a request&#41; and a server &#40;the application that responds to the request&#41; should exchange messages. The messages include information such as the URL &#40;the web address where the request is sent&#41;, the method &#40;the type of action the client wants to perform&#41;, the headers &#40;additional information about the request or the response&#41;, and the body &#40;the data that is sent or received&#41;.</p>
+        <p>When a user wants to access some information or service from a website, they send a <strong>request</strong> to the website's server. The request contains some details about what the user wants, such as the URL &#40;Uniform Resource Locator&#41; of the website, as well as the method &#40;such as GET, POST, PUT, or DELETE&#41; and the parameters &#40;such as keywords, filters, or options&#41; of the request.</p>
+        <p>The <strong>website's server receives the request and processes it</strong>. The server may need to access some data from a database or perform some calculations or operations to fulfill the request. The server then creates a response that contains the information or service that the user requested.</p>
+        <p>So how do APIs fit into all of this? When using a web API, it acts as the intermediary, or the middleman, between the user and the server. The web API follows some rules or standards to ensure that the communication is clear and consistent. These rules or standards are called the protocol of the web API. The protocol defines how the request and response should be formatted, what kind of data should be included, and how to handle errors or exceptions.</p>
+        <p>The user receives the response from the web API and displays it on their browser or application. The response may contain some data in a JSON (JavaScript Object Notation) format, which is a common way to represent structured data in a human-readable and machine-readable way. The response may also contain some status codes that indicate the success or failure of the request, such as 200 (OK), 404 (Not Found), or 500 (Internal Server Error).</p>
       </article>
       <article id="api-examples">
         <h3>Web API examples</h3>
+        <p>There is <strong>a wide variety of web APIs, including Fetch, Web Storage, and</strong> &#8212; the one we're covering today &#8212; <strong>Geolocation</strong>. They all have different purposes, where:</p>
+          <ul>
+            <li><strong>Fetch</strong> is used for fetching data from the internet in web applications, and </li>
+            <li><strong>Web Storage</strong> is a simple way to store and remember small pieces of information on your device. </li>
+            <li>As for <strong>Geolocation</strong>, that will be covered in the next section.</li>
+          </ul>
       </article>
     </section>
     <section>
       <h2>Geolocation</h2>
       <article id="geo-what">
-        <h3>What is Geolocation API ?</h3>
+        <h3>What is Geolocation API?</h3>
         <p>
           Geolocation APIs enable developers to access a device's geolocation, it
           utilizes various methods like WIFI, GPS, and IP to determine a user's
@@ -133,12 +170,12 @@
             attacks by those with malicious intent.</p>
           </li>
           <li><strong>Concerns and Data Rights:</strong> With the growth of privacy
-            awareness, according to Matthew Crozier (n.d.)
+            awareness, according to Matthew Crozier &#40;n.d.&#41;
             <blockquote cite="https://granicus.com/blog/pros-cons-using-geolocation-online-community-engagement/">“Jurisdictions leading
             the way on data privacy like Europe and Canada, along with some US
-            Federal Statutes such as COPPA (Children's Online Privacy Protection
-            Act) are starting to form an opinion that IP addresses are PII, or
-            "personal data" <cite>(Matthew Crozier, n.d.)</cite>.</blockquote> 
+            Federal Statutes such as COPPA &#40;Children's Online Privacy Protection
+            Act&#41; are starting to form an opinion that IP addresses are PII, or
+            "personal data" <cite>&#40;Matthew Crozier, n.d.&#41;</cite>.</blockquote> 
             Gathering such information without explicit consent may pose legal and ethical challenges,emphasizing the need for caution in data collection.</p>
           </li>
         </ul>
@@ -155,8 +192,8 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2023 Arielle Marin, Ali Abbasi, Nathalie Chang, Uellem Espinueva</p>
-    <p>For educational purpose only.</p>
+    <p>&copy; 2023 Ali Abbasi, Arielle Marin, Nathalie Chang, Uellem Espinueva</p>
+    <p>For educational purposes only.</p>
   </footer>
 </div>
 </body>
