@@ -111,7 +111,7 @@ html {
 
 
 button {
-    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     color: var(--dark1);
@@ -313,6 +313,31 @@ section{
     h4 {
         font-size: 1.25rem;
     }
+}
+
+a.button,
+a.button:visited {
+    background-color: var(--sec1);
+    color: var(--light1);
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75rem 3rem;
+    border-radius: 0.25rem;
+}
+
+a.button:hover,
+a.button:focus {
+    background-color: var(--sec2);
+    box-shadow: 0.25rem 0.125rem 0.75rem var(--dark2);
+    transition: 0.2s ease;
+}
+
+a.button:focus {
+    border: 2px solid var(--sec1);
+}
+
+a.button:active {
+    background-color: var(--sec3);
 }
 
 
